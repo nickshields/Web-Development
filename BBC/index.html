@@ -1,0 +1,325 @@
+<!doctype html>
+<html>
+<head>
+    <title>Nick's BBC </title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    
+    body{
+        margin:0px;
+        font-family: Arial,helvetica,sans-serif;
+    }
+    
+    #topbar{
+        background-color:#7B0000;
+        width:100%;
+        height:40px;
+        color:white;
+    
+    }
+    
+    .fixedwidth{
+        width:1200px;
+        margin: 0 auto;
+    }
+    #logodiv{
+        float:left;
+        border-right: 1px solid #990000;
+        padding-right:10px;
+    }
+    #signindiv{
+        font-weight:bold;
+        padding: 6px 80px 9px 20px;
+        font-size:0.9em;
+        float:left;
+        border-right: 1px solid #990000;
+    }
+    
+    #signindiv img {
+        position:relative;
+        top: 3px;
+    }
+    
+    #topmenudiv{
+        float:left;
+    }
+    #topmenudiv li{
+        list-style:none;
+        font-weight:bold;
+        font-size:0.9em;
+        border-right: 1px solid #990000;
+        padding:10px 20px 13px 20px;
+        float:left;
+    }
+
+    #topmenudiv ul{
+        padding:0;
+        margin:0;
+    }
+    
+    #searchdiv{
+        float:left;
+        padding:8px;
+        }
+    #searchdiv input{
+        height:15px;
+        border:none;
+        padding:3px 0 3px 5px;
+        font-size:1em;
+        background-image:url("images/search.png");
+        background-repeat: no-repeat;
+        background-position: right center;
+        }
+    
+    #newsbar{
+        background-color:#990000;
+        width:100%;
+        height:90px;
+        color:white;
+    
+    }
+    .break{
+        clear:both;
+    }
+    
+    #newsbar p{
+        margin:0;
+        padding:0;
+        padding-top:10px;
+        padding-left:4px;
+        float:left;
+    }
+    #newsheader{
+        font-size:3em;
+    }
+    #uk{
+        font-size:0.7em;
+        padding-left:20px;
+    }
+    #rss{
+        float:right;
+        margin-top:40px;
+    }
+    
+    #rss img{
+        height:14px;
+    }
+
+    #topicmenu{
+        
+        
+    }
+    #topicmenu ul{
+        background-color:#3E0C0D;
+        margin:0;
+        padding:5px 0 0 5px;
+        height:20px;
+        
+    }
+    #topicmenu li{
+        list-style:none;
+        font-size:0.8em;
+        border-right: 1px solid #990000;
+        float:left;
+        background-color:none;
+        padding: 0 10px 0 10px;
+    }
+    .selected{
+        background-color:#EDEDED;
+        color: #505057;
+        height: 20px;
+        position:relative;
+        top:-4px;
+        padding-top: 4px !important;
+    }
+    #content{
+        width:100%;
+        color:#505050;
+        font-size:0.8em;
+    }
+    .date{
+        font-weight:bold;
+    }
+    h1 {
+        color: #4A7194;
+        font-size:2.4em;
+    }
+    .headlineimage{
+        float: left;
+    }
+    .newsitem{
+        position:relative;
+        left:10px;
+        top: -15px;
+        width: 250px;
+        float:left;
+        font-size:1.1em;
+    }
+    
+    .newsitem a {
+        color: #4A7194;
+        text-decoration:none;
+        
+    }
+    .newsitem a:hover {
+        text-decoration:underline;
+    }
+    .video{
+        background-image:url("images/play.png");
+        background-size: 13px 13px;
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left:20px;
+    }
+    .newsitem p {
+        padding-top:4px;
+        margin:0;
+    }
+    .music{
+        background-image:url("images/music.png");
+        background-size: 13px 13px;
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left:20px;
+    }
+    .live{
+        background-image:url("images/live.png");
+        background-size: 24px 13px;
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left:20px;
+    }
+    
+    #watchlisten{
+        position: relative;
+        top:-75px;
+        margin:0;
+        background-color:#EEEEEE;
+        float:right;
+        width:400px;
+    }
+    h2 {
+        color: #505050;
+        font-size:2em;
+        margin:10px 0 10px 20px;
+    }
+    .boxes{
+        margin:20px 10px 0 0;
+        float:right;
+    }
+    .videoscreen{
+        width:100%
+    }
+    #watchlisten a:hover {
+        text-decoration:underline;
+    }
+    #watchlisten a {
+        color: #4A7194;
+        text-decoration:none;
+        
+    }
+    </style>    
+</head>
+
+<body>
+    <div id="container">
+    
+        <div id="topbar">
+            
+            <div class="fixedwidth">
+                <div id="logodiv"><img src="images/bbc_logo"/></div>
+                <div id="signindiv"><img src="images/sign_in.png" /> Sign In</div>
+                <div id="topmenudiv">
+                    <ul>
+                        <li>News</li>
+                        <li>Sports</li>
+                        <li>Weather</li>
+                        <li>IPlayer</li>
+                        <li>TV</li>
+                        <li>Radio</li>
+                        <li>More...</li>
+                    </ul>
+                </div>
+                <div id="searchdiv">
+                    <input type="text" placeholder="Search"/>
+                </div>
+            </div>
+        </div>
+        
+        <div class="break"></div>
+        
+        <div id="newsbar">
+            
+            <div class="fixedwidth">
+                <p id="newsheader">NEWS<span id="uk">UK</span></p>
+                
+                <div id="rss">
+                    RSS<img src="images/rss.png"/>
+                </div>
+
+                <div class="break"></div>
+                
+                <div id="topicmenu">
+                    <ul>
+                        <li>Home</li>
+                        <li>World</li>
+                        <li class="selected">UK</li>
+                        <li>England</li>
+                        <li>N. Ireland</li>
+                        <li>Scotland</li>
+                        <li>Wales</li>
+                        <li>Business</li>
+                        <li>Politics</li>
+                        <li>Health</li>
+                        <li>Education</li>
+                        <li>Sci/Environment</li>
+                        <li>Technology</li>
+                        <li style="border-right:none">Entertainment & Arts</li>
+                    </ul>
+                </div>
+            
+            
+            </div> 
+                
+        </div>
+        
+        <div class="break"></div>
+        
+        <div id="content">
+            
+            <div class="fixedwidth">
+                <p><span class="date">2 April 2014</span> Last updated at 14:13</p>
+                <h1>Pollution to Spread across England</h1>
+                <img class="headlineimage" src="images/content.jpg"/>
+                <div class="newsitem">
+                    <p> Health warnings have been issued by the government as pollution spreading across England is forecast to hit high levels.</p>
+                    <p><a class="video" href="">Why are pollution levels so high?</a></p>
+                    <p><a class="video" href="">Saharan dust visible on cars</a></p>
+                    <p><a class="video" href="">How Saharan dust reached the UK</a></p>
+                    <p><a href="">What will pollution do to us?</a></p>
+                    <p><a class="music" href="">How Saharan dust reached the UK</a></p>
+                </div>
+            
+            <div id="watchlisten">
+                <img src="images/boom.png" class="boxes"/>
+                <h2>Watch/Listen</h2>
+                <img class="videoscreen" src="images/boomvids.png"/>
+                <p><a class="live" href=""><strong>BBC News Channel Live</strong></a></p>
+
+            
+            
+            </div>
+            
+            </div>
+            
+        </div>
+    
+    </div>
+
+
+
+</body>
+</html>
