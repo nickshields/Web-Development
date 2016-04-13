@@ -12,16 +12,14 @@
 
 <body>
 	
-	<p id="text">Some text</p>
+	<button id="myButton">You know you want to click me....</button>
 	
 	<script type="text/javascript">
-		//This is a comment
-		//The below line of code changes parts of the HTML document
+		document.getElementById("myButton").onclick=function(){
 		
-		/*This is a multiline comment
-			SEEEEEEEEEEE STILL COMMENTED!
-		*/
-		document.getElementById("text").innerHTML="Some more text";
+			alert("Hi!");
+		
+		}
 	
 	</script>
 
