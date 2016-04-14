@@ -13,36 +13,28 @@
 </head>
 
 <body>
-    <button id="stylesChanger">Change the Text! </button>
-    <div id="firstDiv">This is some text</div>
-
+    <p>What is the weather?</p>
+    <input id="weather"/>
+    <button id="myButton">Submit</button>
 	
 	<script type="text/javascript">
         
-        //Declaring Arrays
-        var myArray = new Array();
-        myArray[0]="pizza";
-        myArray[1]="chocolate";
-        myOtherArray= ["rain", "sunshine"];
+        //Example using a simple if statement
         
-        //Appending to end of array
-        myOtherArray.push("snow");
+        var userInput = document.getElementById("weather").value;
         
-        //Removing from array. (Start at index one, and remove 1 element)
-        //add element inbetween other elements (Puts hail before sunshine)
-        myOtherArray.splice(2, 0, "hail", "cloudy");
-        
-        //How many elements in array?
-        console.log(myOtherArray.length)
-        
-        
-        //Log array to console
-        console.log(myOtherArray);
-        
-        
-		document.getElementById("stylesChanger").onclick=function(){
-			document.getElementById("firstDiv").innerHTML = myArray[0];
-		}
+        document.getElementById("myButton").onclick=function(){
+            userInput = document.getElementById("weather").value;
+            
+            if (userInput == "snow"){
+                alert("Yep!");
+            }
+            else{
+                alert("Nope");
+            }
+            
+            
+        }
 	
 	</script>
 
