@@ -13,25 +13,22 @@
 </head>
 
 <body>
-    <p>How many fingers am I holding up?</p>
-    <input id="answer"/>
-    <button id="myButton">Submit</button>
-    <p id="result"></p>
-	
+    <p id="arrayString"></p>
+    
 	<script type="text/javascript">
         
-        //Simple Game where user guesses a number between 1-5 and is alerted whether they 
-        //guessed correctly
         
-        document.getElementById("myButton").onclick=function(){
-            var x=Math.floor((Math.random())*6);
-            if (document.getElementById("answer").value == x){
-                document.getElementById("result").innerHTML = "Correct! The Answer was " + x;
-            }else{
-                document.getElementById("result").innerHTML = "Incorrect! The Answer was " + x; 
-            }
+        //Basic Example of a For Loop
+        var arrayString = "";
+        
+        var myArray = ["pizza", "chocolate", "crisps"];
+        for (var i=0; i<myArray.length; i++){
             
-        }
+            arrayString= arrayString + " " + myArray[i];
+            
+        } 
+        document.getElementById("arrayString").innerHTML = arrayString;
+        
 	
 	</script>
 
