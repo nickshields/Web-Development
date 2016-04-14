@@ -7,28 +7,24 @@
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style type="text/css">
-    #circle{
-        width:100px;
-        height:100px;
-        background-color:red;
-        border-radius:50px;
-    }
-	
-	
-    </style>    
+
     
 
 </head>
 
 <body>
-    
-    <div id="circle"> </div>
+    <input id="myInput" type="text" value="test"/>
+    <button id="stylesChanger">Change the Text! </button>
+    <div id="firstDiv">This is some text</div>
+
 	
 	<script type="text/javascript">
-        //Circle Dissapears
-		document.getElementById("circle").onclick=function(){
-			document.getElementById('circle').style.display = 'none';
+        
+        var newText= document.getElementById("myInput").value;
+        
+		document.getElementById("stylesChanger").onclick=function(){
+            newText= document.getElementById("myInput").value;
+			document.getElementById("firstDiv").innerHTML = newText;
 		}
 	
 	</script>
