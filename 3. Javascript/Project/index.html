@@ -7,7 +7,13 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
+        body{
+            font-family:Verdana, Geneva, sans-serif;
+        }
     #box{
+        position:relative;
+        top:410px;
+        left:200px;
         background-color:red;
         height:200px;
         width:200px;
@@ -19,10 +25,16 @@
 </head>
 
 <body>
-    <p>Your time: <span id="time"></span></p>
+    
+    
+    <h1>Test your reactions!</h1>
+    <p>Click on the boxes and circles as quickly as you can!</p>
+    <p><strong>Your time: </strong><span id="time">0</span></p>
     <div id="box"></div>
     
 	<script type="text/javascript">
+        
+        //Everything Here works EXCEPT I need to make circles appear too, not just squares
         var clickedTime;
         var createdTime;
         var reactionTime;
@@ -35,6 +47,22 @@
             
             var time = Math.random()*5000;
             setTimeout(function() {
+                colors = ["red", "green", "blue", "black"]
+                randColor = Math.floor(Math.random()*4)
+                randomSize = (Math.floor(Math.random()*200)).toString() + 'px';
+                randomLocation = (Math.floor(Math.random()*500)).toString() + 'px';
+                document.getElementById("box").style.backgroundColor = colors[randColor];
+                if (Math.random() > 0.5){
+                    document.getElementById("box").style.borderRadius = randomSize;
+                }
+                else{
+                    document.getElementById("box").style.borderRadius = "0";   
+                }
+                document.getElementById("box").style.borderRadius = "0";
+                document.getElementById("box").style.height = randomSize;
+                document.getElementById("box").style.width = randomSize;
+                document.getElementById("box").style.top = randomLocation;
+                document.getElementById("box").style.left = randomLocation;
                 document.getElementById("box").style.display = 'block';
                 
                 createdTime = Date.now();
