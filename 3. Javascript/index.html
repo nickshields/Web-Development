@@ -13,26 +13,23 @@
 </head>
 
 <body>
-    <p>What is the weather?</p>
-    <input id="weather"/>
+    <p>How many fingers am I holding up?</p>
+    <input id="answer"/>
     <button id="myButton">Submit</button>
+    <p id="result"></p>
 	
 	<script type="text/javascript">
         
-        //Example using a simple if statement
-        
-        var userInput = document.getElementById("weather").value;
+        //Simple Game where user guesses a number between 1-5 and is alerted whether they 
+        //guessed correctly
         
         document.getElementById("myButton").onclick=function(){
-            userInput = document.getElementById("weather").value;
-            
-            if (userInput == "snow"){
-                alert("Yep!");
+            var x=Math.floor((Math.random())*6);
+            if (document.getElementById("answer").value == x){
+                document.getElementById("result").innerHTML = "Correct! The Answer was " + x;
+            }else{
+                document.getElementById("result").innerHTML = "Incorrect! The Answer was " + x; 
             }
-            else{
-                alert("Nope");
-            }
-            
             
         }
 	
