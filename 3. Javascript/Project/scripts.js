@@ -1,4 +1,4 @@
-        //Everything Here works EXCEPT I need to make circles appear too, not just squares
+        //Reaction Game
         var clickedTime;
         var createdTime;
         var reactionTime;
@@ -7,22 +7,20 @@
         
         
         function makeBox() {
-
-            
             var time = Math.random()*5000;
             setTimeout(function() {
-                colors = ["red", "green", "blue", "black"]
+				colors = ["red", "green", "blue", "black"]
                 randColor = Math.floor(Math.random()*4)
                 randomSize = (Math.floor(Math.random()*200)).toString() + 'px';
                 randomLocation = (Math.floor(Math.random()*500)).toString() + 'px';
                 document.getElementById("box").style.backgroundColor = colors[randColor];
-                if (Math.random() > 0.5){
-                    document.getElementById("box").style.borderRadius = randomSize;
-                }
-                else{
-                    document.getElementById("box").style.borderRadius = "0";   
-                }
-                document.getElementById("box").style.borderRadius = "0";
+				x = Math.random();
+				if (x > 0.5){
+					document.getElementById("box").style.borderRadius = "0";
+				}else{
+					document.getElementById("box").style.borderRadius = "50%";
+				}
+
                 document.getElementById("box").style.height = randomSize;
                 document.getElementById("box").style.width = randomSize;
                 document.getElementById("box").style.top = randomLocation;
