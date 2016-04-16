@@ -33,16 +33,15 @@
 <body>
 
 	<div id="circle"></div>
-	<div class="square"></div>
-	<div class="square"></div>
+    <p>This is some text</p>
+    <iframe src="http://www.cnn.com"> </iframe>
 
 	<script>
-        //The way we click on something in jQuery
+        //Hover function.. Also how to change website content on click 
         
-	
-        $("div").click(function(){
-           alert("Div Clicked!");
-            
+        $("#circle").hover(function(){
+            //$("#circle").html("hello.com");
+            $("iframe").attr("src", "http://www.bbc.com");
             
         });
 		
