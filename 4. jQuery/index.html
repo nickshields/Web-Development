@@ -22,30 +22,60 @@
 		border-radius:100px;
 		background-color:green;
 	}
-        
+    #fixed{
+        height:18px;        
+        }
 	
-	
+    p{
+        margin:0;
+        padding:0;
+        }
 	</style>
+    
+    
     
 
 </head>
 
 <body>
+    <div id="fixed">
+        <p>This is some text that is about to fade</p>
+    </div>
 
-	<div id="circle"></div>
-	<div class="square"></div>
-	<div class="square"></div>
+    <button id="fadeOut">Fade Out!</button>
+    <button id="fadeIn">Fade In!</button>
 
 	<script>
-        //Changing styles using jQuery
+        //Messing around with the jQuery fading properties
+        /*In general, we can use something like this:
         
-        $("#circle").click(function(){
-            
-            //$(this).css("display", "none");
-            //or you coulde use:
-            //$(this).hide();
-            //to fade an object out:
-            $(".square").fadeOut();
+        $("p").fadeIn("fast");
+        
+        But, if you want to inlcude a callback function:
+        
+        $("p").fadeOut("2000", function(){
+            alert("Fade out complete");
+            });
+        });
+        
+        
+        Fade speed can use words like slow or fast, or number in milliseconds
+        
+        
+        */
+        
+        
+        
+        
+        $("#fadeOut").click(function(){
+            $("p").fadeOut("2000", function(){
+                
+                alert("Fade out complete");
+            });
+        });        
+        
+        $("#fadeIn").click(function(){
+            $("p").fadeIn("fast");
         });
 		
 		
