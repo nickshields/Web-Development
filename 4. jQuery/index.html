@@ -11,8 +11,8 @@
     
     <style>
 	.square{
-		width:200px;
-		height:200px;
+		width:300px;
+		height:300px;
 		background-color:red;
         margin-top:10px;
 	}
@@ -33,16 +33,19 @@
 <body>
 
 	<div id="circle"></div>
-    <p>This is some text</p>
-    <iframe src="http://www.cnn.com"> </iframe>
+	<div class="square"></div>
+	<div class="square"></div>
 
 	<script>
-        //Hover function.. Also how to change website content on click 
+        //Changing styles using jQuery
         
-        $("#circle").hover(function(){
-            //$("#circle").html("hello.com");
-            $("iframe").attr("src", "http://www.bbc.com");
+        $("#circle").click(function(){
             
+            //$(this).css("display", "none");
+            //or you coulde use:
+            //$(this).hide();
+            //to fade an object out:
+            $(".square").fadeOut();
         });
 		
 		
