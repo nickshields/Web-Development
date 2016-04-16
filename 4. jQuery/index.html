@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 	
     
     <style>
@@ -39,24 +39,31 @@
 
 <body>
     
-    <div id="circle"></div>
+    <h1>Asyncronous Javascript and XML</h1>
 
 	<script>
+        //AJAX
         
-        //Animating divs
-        $("#circle").click(function(){
-            $(this).animate({
-                width:"300px",
-                height:"300px",
-                borderRadius:"150px",
-                marginLeft:"100px",
-                marginTop:"100px"
+        //We can use the get function to extract information from a file:
+        
+        /*$.get("test.html", function(data) {
+            alert(data);
             
+        });*/
+        
+        
+        //The AJAX function is better than the get function because we can include exception 
+        //handling if the website goes down and the file that we want to refer to no longer exists
+        
+        $.ajax({
+            url:"test.html"
             
-            },800);
-            
+        }).done(function(data){
+            //Appending using jQuery
+            $("h1").append(data);
+                
         });
-		
+
 		
 	</script>
     
