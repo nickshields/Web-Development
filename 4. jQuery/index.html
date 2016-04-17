@@ -42,28 +42,17 @@
     <h1>Asyncronous Javascript and XML</h1>
 
 	<script>
-        //AJAX
         
-        //We can use the get function to extract information from a file:
+        //Regex is a way to validate things.
+        //In this example, we just use a match function to identify if the word 
+        // 'great' is in the var string. The flag 'i' in the variable regex
+        // makes the match function case insensitive.
         
-        /*$.get("test.html", function(data) {
-            alert(data);
-            
-        });*/
+        var regex=/great/i;
+        var string="Regex is Great!";
         
-        
-        //The AJAX function is better than the get function because we can include exception 
-        //handling if the website goes down and the file that we want to refer to no longer exists
-        
-        $.ajax({
-            url:"test.html"
-            
-        }).done(function(data){
-            //Appending using jQuery
-            $("h1").append(data);
-                
-        });
-
+        var result = string.match(regex);
+        alert(result);
 		
 	</script>
     
