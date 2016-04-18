@@ -7,13 +7,20 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     
     <style>
-        #square{
+        #draggable{
             width:200px;
             height:200px;
-            background-color:grey;
+            background-color:green;
+            
+        }
+        #resizable{
+            width:200px;
+            height:200px;
+            background-color:red;
             
         }
         
@@ -25,13 +32,16 @@
 
 <body>
     
-    <div id="square"></div>
-
+    <div id="draggable">Drag me around</div>
+    <div id="resizable">Resize me!</div>
     <script>
         //The draggable function makes our square div draggable. Very straightforward
         //Just make sure that you have the jQuery UI implemented 
+        //The resizable function requires the stylesheet that was taken from google api
         
         $("#square").draggable();
+        $("#resizable").resizable();
+        
         
 		
 	</script>
