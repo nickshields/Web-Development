@@ -18,87 +18,190 @@
     <![endif]-->
     
     <style>
-        .box{
-            background-color:#F7F7F9;
-            border:1px solid grey;
-            
-        }
-        
-        .large{
-			font-size:800%;
-			color:red;
+		.navbar-brand{
+			font-size:1.8em;
+			
+		}
+		
+		#topContainer{
+			background-image:url("background.jpg");
+			height:400px;
+			width:100%;
+			background-size:cover;
+			
+		}
+		#middleContainer{
+			background-image:url("background2.jpg");
+			height:400px;
+			width:100%;
+			background-size:cover;
+			
+		}
+		#topRow{
+			margin-top:80px;
+			text-align:center;
+		}
+		#topRow h1 {
+			font-size:300%;
+		}
+		.bold{
+			font-weight:bold;
+		}
+		.marginTop{
+			margin-top:30px;
+		}
+		.center{
+			text-align:center;
+		}
+		.title{
+			margin-top:100px;
+			font-size:300%;
+		}
+		#footer{
+			background-color:#B0D1FB;
+			width:100%;
+			padding-top:70px;
+		}
+        .marginBottom{
+			margin-bottom:30px;
+		}
+		.appstoreImage{
+			width:250px;
 			
 		}
     
     </style>
   </head>
   <body>
-    
-    <div class="navbar navbar-inverse">
-        <div class="container">
-            <div class="navbar-header">
-                <a href="" class="navbar-brand">My Website</a>
-            
-            
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-            data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            
-            </div>
-            
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                
-                    <li class="active"><a href="">Page 1</a></li>
-                    <li><a href="">Page 2</a></li>                    
-                    <li><a href="">Page 3</a></li>
-                
-                </ul>
-            </div> 
-        </div>
-    </div>  
-        
-
-    <div class="container">
-           <h1>Our Bootstrap Page</h1>      
-        <button class="btn btn-success" data-toggle="modal" data-target="#myModal"
-        >Launch Modal</button>
-        
-        <div class="modal" id="myModal">
-			<div class="modal-dialog modal-sm">
-				<div class="modal-content">
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand">MyApp</a>
+				</div>
+				
+				<div class="collapse navbar-collapse">
+					<ul class= "nav navbar-nav">
+						<li class ="active"><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#download">Download</a></li>
+					</ul>
 					
-					<div class="modal-header">
-						<button class="close" data-dismiss="modal">x</button>
-						<h4 class="modal-title">My Modal!</h4>
-					</div>					
+					<form class="navbar-form navbar-right">
+						
+						<div class="form-group">
+							<input type="email" placeholder="Email" class="form-control"/>
+						</div>
+						<div class="form-group">
+							<input type="password" placeholder="Password" class="form-control"/>
+						</div>
+						<button type="submit" class="btn btn-success">Log In</button>
 					
-					<div class="modal-body">
-						What a fantastic modal
-					</div>
 					
-					<div class="modal-footer">
-						<button class="btn btn-default" data-dismiss="modal">Close</button>	
-						<button class="btn btn-success">Save Changes</button>
-					</div>
+					</form>
 				
 				</div>
 			
 			
 			</div>
-        
-        
-        </div>
-        
-	</div>
+	  </div>
+	  
+		<div class="container contentContainer" id="topContainer">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3" id="topRow">
+				
+				<h1 class="marginTop">My Awesome App</h1>
+				<p class="lead">This is why you should download this fantastic app.</p>
+				
+				<p>Some more information about the app. You can go into a little more detail if you want to.</p>
+				
+				<p class="bold marginTop">Interested? Join our mailing list!</p>
+				
+				
+				<form class="marginTop">
+					<div class="input-group">
+						<span class="input-group-addon">@</span>
+						<input type="email" class="form-control" placeholder="Your Email" />
+					</div>
+						<input type="submit" class="btn btn-success btn-lg marginTop"/>
+					
+					
+
+				
+				
+				
+				</form>
+			
+				</div>
+			</div>
+		</div>
+		
+		<div class="container contentContainer" id="middleContainer">
+			
+			<div class="row" class="center">
+				<h1 class="center title">Why This App is Awesome</h1>
+				<p class="lead center">Summary of the app's awesomeness</p>
+			
+			</div>
+			
+			<div class="row marginBottom">
+				
+			<div class="col-md-4 marginTop">
+				<h2><span class="glyphicon glyphicon-music"></span>Header</h2>
+				<p>A Brief description of one of the best features of your app.
+				A Brief description of one of the best features of your app.</p>
+				<button class="btn btn-success">Sign Up!</button>
+				</div>
+				
+			<div class="col-md-4 marginTop">
+				<h2><span class="glyphicon glyphicon-off"></span>Header</h2>
+				<p>A Brief description of one of the best features of your app.
+				A Brief description of one of the best features of your app.</p>
+				<button class="btn btn-success">Sign Up!</button>
+				</div>
+				
+			<div class="col-md-4 marginTop">
+				<h2><span class="glyphicon glyphicon-pencil"></span>Header</h2>
+				<p>A Brief description of one of the best features of your app.
+				A Brief description of one of the best features of your app.</p>
+				<button class="btn btn-success">Sign Up!</button>
+				</div>
+			
+			</div>
+		</div>
+		
+		<div class="container contentContainer" id="footer">
+		
+			<div class="row">
+				<h1 class="center title">Download The App!</h1>
+				<p class="lead center">Really, why should I download this app?</p>
+				<p class="center"> <img src="appstore.png" class="appstoreImage"/></p>
+			
+			</div>
+		
+		
+		
+		
+		
+		</div>
+    
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    
+    <script>
+		$(".contentContainer").css("min-height", $(window).height());
+    
+    
+    
+    
+    </script>
   </body>
 </html>
