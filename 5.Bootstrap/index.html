@@ -62,35 +62,37 @@
         </div>
     </div>  
         
-        <h1>Our Bootstrap Page</h1>  
-    <div class="container">
-		
-		<span class="glyphicon glyphicon-calendar large"></span>
-		
-			<div class="input-group">
-				<input class="form-control" type="text" />
-				<span class="glyphicon glyphicon-comment input-group-addon"></span>
-			</div>
-			
-		<button type="button" class="btn btn-success">
-		<span class="glyphicon glyphicon-calendar"> Calendar</span>
-		</button>
-		
-		<div class="alert alert-danger alert-dismissable">
-			<button type="button" class="close" data-dismiss="alert">close</button>
-			You've done it!
-		</div>
-		
-		<ul class="list-group">
-			<li class="list-group-item">Item 1
-			<span class="badge">12</span></li>	
-			<li class="list-group-item">Item 1</li>			
-			<li class="list-group-item">Item 1</li>			
-			<li class="list-group-item">Item 1</li>			
-			<li class="list-group-item">Item 1</li>
-		
-		</ul>
 
+    <div class="container">
+           <h1>Our Bootstrap Page</h1>      
+        <button class="btn btn-success" data-toggle="modal" data-target="#myModal"
+        >Launch Modal</button>
+        
+        <div class="modal" id="myModal">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					
+					<div class="modal-header">
+						<button class="close" data-dismiss="modal">x</button>
+						<h4 class="modal-title">My Modal!</h4>
+					</div>					
+					
+					<div class="modal-body">
+						What a fantastic modal
+					</div>
+					
+					<div class="modal-footer">
+						<button class="btn btn-default" data-dismiss="modal">Close</button>	
+						<button class="btn btn-success">Save Changes</button>
+					</div>
+				
+				</div>
+			
+			
+			</div>
+        
+        
+        </div>
         
 	</div>
 
